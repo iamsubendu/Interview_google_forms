@@ -25,6 +25,12 @@ a {
   align-items: center;
 }
 
-.createForm form {
+.adminForm .line {
+  border-left: 2px solid #000;
+  min-height: 85vh;
+  margin-top: 1.5rem;
+}
+
+.displayForm form {
   margin: 5vw 10vw;
 }

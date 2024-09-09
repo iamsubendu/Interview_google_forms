@@ -1,12 +1,15 @@
 import React from "react";
 
-const SelectOne = ({ field, handleSelectOne }) => {
+const SelectOne = ({ id, text, options }) => {
   return (
-    <div className="selectOne">
+    <div className="selectOne" key={id}>
+      <p>{text}</p>
       <select className="form-select" aria-label="Default select example">
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        {options.map((value) => (
+          <option key={value.id} value={value.text}>
+            {value.text}
+          </option>
+        ))}
       </select>
     </div>
   );

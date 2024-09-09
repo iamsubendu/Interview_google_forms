@@ -1,8 +1,8 @@
 import React from "react";
 
-const AddTextField = ({ text }) => {
+const AddTextField = ({ id, text }) => {
   return (
-    <div className="mb-3">
+    <div className="addTextField" key={id}>
       <label htmlFor="exampleInputName" className="form-label">
         {text}
       </label>

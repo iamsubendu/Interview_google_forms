@@ -1,18 +1,23 @@
 import React from "react";
 
-const MultipleSelect = ({ field, handleMultipleSelect }) => {
+const MultipleSelect = ({ id, text, options }) => {
   return (
-    <div className="multipleSelect">
-      <div className="form-check">
-        <input
-          className="form-check-input"
-          type="checkbox"
-          value=""
-          id="flexCheckChecked"
-        />
-        <label className="form-check-label" htmlFor="flexCheckChecked">
-          Checked checkbox
-        </label>
+    <div className="multipleSelect" key={id}>
+      <p>{text}</p>
+      <div className="form-check d-flex gap-5 flex-wrap">
+        {options.map((value) => (
+          <div key={value.id}>
+            <input
+              className="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckChecked"
+            />
+            <label className="form-check-label" htmlFor="flexCheckChecked">
+              {value.text}
+            </label>
+          </div>
+        ))}
       </div>
     </div>
   );
